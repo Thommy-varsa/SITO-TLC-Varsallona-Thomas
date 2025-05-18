@@ -1,0 +1,116 @@
+/* Tema Futuristico Neon - Dark Mode con accenti neon */
+
+:root {
+    --bg-color: #1a1a1a; /* Grigio molto scuro */
+    --card-bg: rgba(20, 20, 20, 0.8);
+    --text-color: #000000;
+    --primary: #00ffa6; /* Arancione */
+    --primary-hover: #00ddff; /* Arancione scuro per hover */
+    --accent: rgb(8, 0, 255);
+    --shadow-glow: rgba(38, 0, 255, 0.6); /* Glow arancione */
+    --card-border: rgba(0, 145, 255, 0.532);
+}
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  h1, h2, h3, h5 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--accent);
+    text-shadow: 0 0 8px var(--accent);
+  }
+  
+  .container {
+    margin: 3rem auto;
+    max-width: 900px;
+    padding: 0 1rem;
+  }
+  
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    box-shadow: 0 0 16px var(--shadow-glow);
+    backdrop-filter: blur(4px);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 24px var(--shadow-glow);
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--primary);
+  }
+  
+  .btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #000;
+    background: var(--primary);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 8px var(--shadow-glow);
+    text-transform: uppercase;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .btn-primary:hover {
+    background: var(--primary-hover);
+    box-shadow: 0 0 16px var(--shadow-glow);
+  }
+  
+  input.form-control, select.form-control {
+    background: rgba(8, 0, 255, 0.8);
+    color: var(--text-color);
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    backdrop-filter: blur(2px);
+  }
+  
+  input.form-control::placeholder,
+  select.form-control {
+    color: #000000;
+  }
+  
+  .karnaugh-cell {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .karnaugh-cell.inactive {
+    background: rgba(255, 255, 255, 0.05);
+    color: #000000;
+  }
+  
+  .karnaugh-cell.active {
+    background: var(--accent);
+    color: #000;
+  }
+  
+  img.img-fluid {
+    border-radius: 8px;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 0 8px var(--shadow-glow);
+  }
+  
+  footer, .lead, p {
+    color: #000000;
+  }
+  
